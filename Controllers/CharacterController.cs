@@ -13,7 +13,6 @@ namespace dotnet_rpg.Controllers
     public class CharacterController : ControllerBase
     {
         private readonly ICharacterService _characterService;
-        private readonly ICharacterService characterService;
 
         public CharacterController(ICharacterService characterService)
         {
@@ -63,4 +62,4 @@ namespace dotnet_rpg.Controllers
             return Ok(response);
         }
     }
-}
+} 
