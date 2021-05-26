@@ -21,6 +21,7 @@ using System.Text;
 using Microsoft.AspNetCore.Http;
 using dotnet_rpg.Services.WeaponService;
 using dotnet_rpg.Services.CharacterSkillService;
+using dotnet_rpg.Services.FightService;
 
 namespace dotnet_rpg
 {
@@ -41,6 +42,7 @@ namespace dotnet_rpg
             services.AddScoped<ICharacterService, CharacterService>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IWeaponService, WeaponService>();
+            services.AddScoped<IFightService, FightService>();
             services.AddScoped<ICharacterSkillService, CharacterSkillService>();
             services.AddAutoMapper(typeof(Startup));
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
